@@ -1,8 +1,7 @@
 {
-  "item.klines_forgemod.testitem": "Ludemite Dust",
-  "item.klines_forgemod.testitem2": "Test Item 2",
+  "item.klines_forgemod.ludem_dust": "Ludemite Dust",
 
   "block.klines_forgemod.ludem_furnace": "Ludem Furnace",
 
-  "creativetab.test_tab": "Test Tab"
+  "creativetab.klines_forgemod_creativemode_tab": "Kline's Forge Mod"
 }

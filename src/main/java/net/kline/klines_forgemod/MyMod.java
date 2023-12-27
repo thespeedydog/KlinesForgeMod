@@ -2,8 +2,8 @@ package net.kline.klines_forgemod;
 
 import com.mojang.logging.LogUtils;
 import net.kline.klines_forgemod.block.ModBlocks;
-import net.kline.klines_forgemod.item.ModCreativeModeTabs;
-import net.kline.klines_forgemod.item.ModItems;
+import net.kline.klines_forgemod.init.ItemInit;
+import net.kline.klines_forgemod.init.CreativeModeTabInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -33,9 +33,10 @@ public class MyMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
-        ModCreativeModeTabs.register(modEventBus);
+        CreativeModeTabInit.register(modEventBus);
 
-        ModItems.register(modEventBus);
+        ItemInit.ITEMS.register(modEventBus);
+        //ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
 
@@ -54,8 +55,8 @@ public class MyMod
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.TESTITEM);
-            event.accept(ModItems.TESTITEM2);
+            event.accept(ItemInit.LUDEM_DUST);
+            event.accept(ModBlocks.LUDEM_FURNACE);
         }
     }
 
